@@ -1,0 +1,22 @@
+.btn-home {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #4caf50; /* Green background color */
+  border: none;
+  color: black;
+  text-align: center;
+  padding: 14px 32px;
+  text-decoration: none; /* No underline */
+  font-size: 64px;
+  cursor: pointer;
+}
+
+.btn-home:hover {
+  background-color: #45a049; /* Darker green color */
+}
+.btn-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px 0;
+}
