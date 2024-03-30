@@ -10,7 +10,7 @@ const Room = ({ room }) => {
   const saveingRoomInfo = () => {
     setRoom(room);
     roomServiece.saveRoom(room);
-    navigate("/room");
+    navigate(`/room/${room.name}`);
   };
 
   return (
