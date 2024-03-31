@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { roomServiece } from "../services/roomService";
+import { useRoom } from "../context/RoomProvider";
 
 const Products = ({ product }) => {
   const [onOff, setOnOff] = useState(product.on);
+  const { setRooms } = useRoom();
 
   const changeColor = () => {
     setOnOff(!onOff);
@@ -18,8 +20,10 @@ const Products = ({ product }) => {
     });
 
     currRoom.products = updatedProducts;
-    roomServiece.updateRoom(currRoom.id, currRoom);
+    const updatedRooms = roomServiece.updateRoom(currRoom.id, currRoom);
     roomServiece.saveRoom(currRoom);
+
+    setRooms(updatedRooms);
   };
 
   return (

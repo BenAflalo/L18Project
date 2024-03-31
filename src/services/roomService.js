@@ -42,6 +42,7 @@ function updateRoom(id, updatedRoom) {
   const updatedRooms = allRooms.filter((room) => room.id !== id);
   updatedRooms.push(updatedRoom);
   storageService.saveRooms(updatedRooms);
+  return updatedRooms;
 }
 function getRoomById(id) {
   const room = storageService.getRoom(id);

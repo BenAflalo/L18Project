@@ -19,7 +19,7 @@ const Room = ({ room }) => {
       className="room-div"
       style={{ backgroundColor: room.color }}
     >
-      {room.name}
+      <h2>{room.name}</h2>
     </div>
   );
 };
